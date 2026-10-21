@@ -1,0 +1,251 @@
+<!doctype html><html lang="en-ZA"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d452f"><meta name="description" content="Tsela Yagwe Network connects skills, investment readiness, franchise development and Africa's agricultural marketplace."><title>Tsela Yagwe Network | Learning. Markets. Opportunity.</title><link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="manifest" href="/manifest.webmanifest"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css"><style>
+/* Isolated, responsive WhatsApp-style assistant; no site layout overrides. */
+body.tyc-ready a.whatsapp{display:none!important}
+#ty-chat{--tyc-green:#075e41;--tyc-deep:#0a4e39;--tyc-soft:#eef6f0;--tyc-gold:#f5ca7e;--tyc-border:#dfe9e3;font-family:Manrope,'DM Sans',Arial,sans-serif;line-height:1.45;letter-spacing:normal;font-size:14px;color:#263b2f}
+#ty-chat *{box-sizing:border-box}
+#ty-chat button,#ty-chat input{font:inherit}
+#ty-chat button:focus-visible,#ty-chat input:focus-visible{outline:3px solid #edae4f;outline-offset:2px}
+#ty-chat .tyc-launcher{position:fixed;z-index:111;right:20px;bottom:calc(19px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center;justify-content:center;min-height:57px;background:#12945a;color:#fff;border:2px solid #fff;border-radius:999px;box-shadow:0 10px 35px #0b392c59;padding:10px 18px 10px 15px;font-weight:800;font-size:13px;white-space:nowrap;cursor:pointer;transition:transform .2s,box-shadow .2s}
+#ty-chat .tyc-launcher:hover{transform:translateY(-2px);box-shadow:0 12px 37px #0b392c70}
+#ty-chat .tyc-launcher-icon{display:grid;place-items:center;width:28px;height:28px}
+#ty-chat .tyc-launcher-close{display:none;font-size:28px;font-weight:400;line-height:1}
+#ty-chat .tyc-dot{height:8px;width:8px;position:absolute;top:8px;right:9px;border-radius:50%;background:var(--tyc-gold);border:1px solid #fff}
+#ty-chat.tyc-open .tyc-launcher-label,#ty-chat.tyc-open .tyc-launcher-icon,#ty-chat.tyc-open .tyc-dot{display:none}
+#ty-chat.tyc-open .tyc-launcher-close{display:block}
+#ty-chat.tyc-open .tyc-launcher{width:55px;height:55px;padding:0;right:22px}
+#ty-chat .tyc-welcome{position:fixed;right:23px;bottom:calc(91px + env(safe-area-inset-bottom,0px));z-index:109;max-width:290px;display:flex;gap:12px;align-items:start;background:white;border:1px solid #dce5dd;border-radius:17px;box-shadow:0 10px 28px #092e2526;padding:15px 11px 15px 17px}
+#ty-chat .tyc-welcome[hidden],#ty-chat.tyc-open .tyc-welcome{display:none}
+#ty-chat .tyc-welcome:after{content:'';position:absolute;right:36px;bottom:-9px;background:#fff;width:15px;height:15px;transform:rotate(45deg);border-bottom:1px solid #dce5dd;border-right:1px solid #dce5dd}
+#ty-chat .tyc-welcome strong{display:block;color:#194631;font-size:13px;margin-bottom:2px}
+#ty-chat .tyc-welcome span{display:block;color:#60746a;font-size:12px}
+#ty-chat .tyc-welcome button{border:0;background:transparent;color:#829087;font-size:20px;line-height:18px;padding:0 4px;cursor:pointer}
+#ty-chat .tyc-panel{position:fixed;z-index:110;right:20px;bottom:calc(91px + env(safe-area-inset-bottom,0px));width:min(394px,calc(100vw - 24px));height:min(610px,calc(100dvh - 118px));background:#fff;border-radius:21px;box-shadow:0 21px 74px #061f1645;border:1px solid #d8e5dd;display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(14px) scale(.98);pointer-events:none;transition:opacity .16s,transform .16s,visibility .16s}
+#ty-chat.tyc-open .tyc-panel{opacity:1;visibility:visible;transform:translateY(0) scale(1);pointer-events:auto}
+#ty-chat .tyc-header{display:flex;align-items:center;gap:11px;min-height:71px;padding:12px 17px;background:linear-gradient(125deg,#0b6246,#073b2c);color:#fff;flex-shrink:0}
+#ty-chat .tyc-avatar{background:#f5ddaa;color:#174b37;font-weight:900;font-family:Georgia,serif;border-radius:50%;display:grid;place-items:center;width:43px;height:43px;position:relative;font-size:16px;flex:none}
+#ty-chat .tyc-avatar span{position:absolute;bottom:-2px;right:-1px;background:#199b5d;color:white;border:2px solid #0b6246;border-radius:50%;width:17px;height:17px;display:grid;place-items:center;font-size:10px}
+#ty-chat .tyc-header-copy{min-width:0;flex:1}
+#ty-chat .tyc-header-copy strong{font-family:Manrope,Arial,sans-serif;display:block;font-weight:800;font-size:14px;color:#fff}
+#ty-chat .tyc-header-copy small{display:flex;align-items:center;gap:5px;font-size:11px;color:#dcf0e2}
+#ty-chat .tyc-online{display:inline-block;width:7px;height:7px;border-radius:50%;background:#83ee99}
+#ty-chat .tyc-close{background:#ffffff1c;color:#fff;border:0;border-radius:50%;font-size:25px;width:33px;height:33px;line-height:33px;flex:none;cursor:pointer}
+#ty-chat .tyc-subhead{background:#f6fbf6;border-bottom:1px solid var(--tyc-border);padding:9px 16px;color:#60766a;font-size:11px;flex-shrink:0}
+#ty-chat .tyc-messages{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:20px 13px 13px;background-color:#f6f4ec;background-image:radial-gradient(#dfe8d9 0.6px,transparent 0.6px);background-size:19px 19px;scroll-behavior:smooth}
+#ty-chat .tyc-message{display:flex;margin:0 0 12px}
+#ty-chat .tyc-message.tyc-user{justify-content:flex-end}
+#ty-chat .tyc-bubble{max-width:88%;white-space:pre-wrap;overflow-wrap:anywhere;background:#fff;border-radius:5px 16px 16px;box-shadow:0 2px 7px #0f3c2114;padding:12px 13px;font-size:12.5px;line-height:1.55;color:#254333}
+#ty-chat .tyc-user .tyc-bubble{background:#d5f6dd;border-radius:16px 5px 16px 16px}
+#ty-chat .tyc-bubble a{color:#0a7551;text-decoration:underline;font-weight:700}
+#ty-chat .tyc-options{display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto;padding:10px 12px;background:#fff;scrollbar-width:thin;flex-shrink:0;max-height:78px;align-items:center}
+#ty-chat .tyc-options:empty{display:none}
+#ty-chat .tyc-chip{border:1px solid #c9ded0;background:#f4faf5;color:#17593b;border-radius:999px;font-weight:700;font-size:11px;min-height:31px;padding:6px 11px;white-space:nowrap;cursor:pointer;flex-shrink:0}
+#ty-chat .tyc-chip:hover{background:#d9f1df}
+#ty-chat .tyc-controls{display:flex;justify-content:space-between;align-items:center;gap:7px;padding:7px 12px 4px;background:white;border-top:1px solid #ebf0e8;flex-shrink:0}
+#ty-chat .tyc-enquiry{border:0;background:transparent;color:#0d774d;padding:6px 3px;font-size:11px;font-weight:800;cursor:pointer}
+#ty-chat .tyc-reset{border:0;background:transparent;color:#6d8071;padding:6px 3px;font-size:11px;cursor:pointer}
+#ty-chat .tyc-compose{display:flex;gap:8px;padding:8px 12px;background:#fff;flex-shrink:0}
+#ty-chat .tyc-compose input{width:100%;min-width:0;border:1px solid #dce7dd;background:#f7f9f5;border-radius:24px;padding:11px 14px;min-height:44px;color:#193e2e;font-size:12px;outline:0}
+#ty-chat .tyc-compose input:focus{border-color:#23a06c;box-shadow:0 0 0 3px #1c8e5c1a}
+#ty-chat .tyc-compose button{display:grid;place-items:center;flex:none;border:0;background:#118454;border-radius:50%;color:white;width:44px;height:44px;font-size:21px;cursor:pointer}
+#ty-chat .tyc-disclaimer{color:#819084;background:#fff;text-align:center;font-size:9px;padding:3px 6px 8px;flex-shrink:0}
+#ty-chat .tyc-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:560px){#ty-chat .tyc-launcher{right:13px;bottom:calc(13px + env(safe-area-inset-bottom,0px));padding:9px 13px;min-height:53px}#ty-chat .tyc-panel{right:12px;bottom:calc(79px + env(safe-area-inset-bottom,0px));width:calc(100vw - 24px);height:min(590px,calc(100dvh - 110px));border-radius:17px}#ty-chat .tyc-welcome{right:13px;bottom:calc(83px + env(safe-area-inset-bottom,0px));max-width:265px}#ty-chat.tyc-open .tyc-launcher{right:14px}#ty-chat .tyc-header{min-height:65px}#ty-chat .tyc-bubble{font-size:12px}}
+@media(max-width:355px){#ty-chat .tyc-launcher-label{display:none}#ty-chat .tyc-launcher{width:53px;padding:9px}}
+@media(prefers-reduced-motion:reduce){#ty-chat .tyc-launcher,#ty-chat .tyc-panel{transition:none!important}#ty-chat .tyc-messages{scroll-behavior:auto}}
+
+</style></head>
+<body><div id="app"><div class="boot"><div class="spinner"></div><p>Tsela Yagwe Network</p></div></div><script src="/config.js"></script><script src="/app.js" defer></script><script>
+/* Tsela Yagwe Network | WebDevPro interactive WhatsApp enquiry assistant.
+   Information and guided FAQs, not a generative AI service. No visitor personal
+   information is submitted to a server; the user reviews and sends via WhatsApp. */
+(()=>{
+  'use strict';
+  if (window.__TY_WHATSAPP_ASSISTANT__) return;
+  window.__TY_WHATSAPP_ASSISTANT__=true;
+  const WA_NUMBER='27651503974';
+  const ROOT='https://tsela-yagwe-network.vercel.app';
+  const categories=['Investor Development Course','Advanced Tech Development Course','Franchise Crop Production Course','Franchise opportunities','Agricultural marketplace','Commodity pricing','Course financing','Website / account support','Other enquiry'];
+  const history=[];
+  const lead={name:'',phone:'',service:'',message:''};
+  let stage='browse',open=false,topicsLast='',lastFocus=null;
+  const V=({tag='div',className='',text='',attrs={},children=[]}={})=>{
+    const el=document.createElement(tag);
+    if(className)el.className=className;
+    if(text)el.textContent=text;
+    Object.entries(attrs).forEach(([key,value])=>el.setAttribute(key,value));
+    children.forEach(c=>el.append(c));return el;
+  };
+  const icon=`<svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M16.03 2C8.3 2 2.04 8.23 2 15.9c0 2.45.64 4.77 1.86 6.85L2 30l7.5-1.94a14.2 14.2 0 0 0 6.53 1.57C23.7 29.63 30 23.38 30 15.7S23.7 2 16.03 2Zm0 25.2a11.54 11.54 0 0 1-5.83-1.59l-.41-.25-4.43 1.14 1.18-4.31-.27-.44a11.32 11.32 0 0 1-1.76-6.07c0-6.32 5.16-11.42 11.51-11.42 6.36 0 11.5 5.1 11.5 11.42s-5.14 11.52-11.5 11.52Zm6.31-8.65c-.35-.17-2.04-1-2.36-1.12-.31-.11-.55-.17-.78.18-.24.35-.9 1.12-1.1 1.35-.2.24-.41.27-.76.1a9.35 9.35 0 0 1-2.79-1.71 10.44 10.44 0 0 1-1.94-2.41c-.2-.34 0-.53.15-.7.17-.19.35-.41.53-.61.17-.21.23-.35.35-.58.12-.24.06-.44-.03-.61-.09-.18-.79-1.9-1.08-2.6-.28-.67-.56-.58-.77-.59h-.65c-.23 0-.6.09-.91.43-.32.35-1.2 1.18-1.2 2.88s1.23 3.35 1.41 3.58c.17.23 2.42 3.7 5.86 5.19.82.36 1.47.58 1.97.73.83.26 1.59.22 2.19.13.67-.1 2.04-.84 2.33-1.65.3-.81.3-1.5.2-1.64-.09-.14-.32-.23-.66-.4Z"/></svg>`;
+  const root=V({attrs:{id:'ty-chat','aria-label':'Tsela Yagwe WhatsApp enquiry assistant'}});
+  root.innerHTML=`
+    <div class="tyc-welcome" id="tyc-welcome"><div><strong>Hi there! 👋</strong><span>Need help with training, farming or the marketplace?</span></div><button type="button" id="tyc-welcome-dismiss" aria-label="Dismiss chat greeting">×</button></div>
+    <section class="tyc-panel" id="tyc-panel" aria-label="Interactive WhatsApp assistant" aria-hidden="true">
+      <div class="tyc-header"><div class="tyc-avatar" aria-hidden="true">TY<span>✓</span></div><div class="tyc-header-copy"><strong>Tsela Yagwe Assistant</strong><small><span class="tyc-online"></span> Online enquiry guide</small></div><button class="tyc-close" type="button" id="tyc-close" aria-label="Close assistant">×</button></div>
+      <div class="tyc-subhead">Ask a question or choose a topic. We can help you send an enquiry on WhatsApp.</div>
+      <div class="tyc-messages" id="tyc-messages" role="log" aria-live="polite" aria-relevant="additions text"></div>
+      <div class="tyc-options" id="tyc-options" aria-label="Suggested questions"></div>
+      <div class="tyc-controls"><button type="button" id="tyc-enquiry" class="tyc-enquiry">📝 Send an enquiry</button><button type="button" id="tyc-reset" class="tyc-reset" title="Start a new conversation">↻ New chat</button></div>
+      <form class="tyc-compose" id="tyc-compose"><label class="tyc-sr" for="tyc-input">Your message</label><input id="tyc-input" maxlength="600" autocomplete="off" placeholder="Ask anything about our services…" aria-label="Type your question" required><button type="submit" aria-label="Send message" title="Send message">➤</button></form>
+      <div class="tyc-disclaimer">Guided answers only · No payments in this chat · WhatsApp opens for final sending</div>
+    </section>
+    <button type="button" class="tyc-launcher" id="tyc-launcher" aria-label="Open WhatsApp chatbot" aria-controls="tyc-panel" aria-expanded="false"><span class="tyc-launcher-icon">${icon}</span><span class="tyc-launcher-label">Chat with us</span><span class="tyc-launcher-close" aria-hidden="true">×</span><span class="tyc-dot" aria-hidden="true"></span></button>
+  `;
+  document.body.append(root);
+  const $=id=>root.querySelector('#'+id);
+  const panel=$('tyc-panel'),launcher=$('tyc-launcher'),messages=$('tyc-messages'),options=$('tyc-options'),input=$('tyc-input'),welcome=$('tyc-welcome');
+  document.body.classList.add('tyc-ready');
+  try{if(sessionStorage.getItem('tyc-greeting-dismissed'))welcome.hidden=true}catch(e){}
+  function message(role,text,{record=true}={}){
+    const row=V({className:'tyc-message '+(role==='bot'?'tyc-bot':'tyc-user')});
+    const bubble=V({className:'tyc-bubble',text});row.append(bubble);messages.append(row);
+    if(record)history.push({role,text});messages.scrollTop=messages.scrollHeight;
+  }
+  function quick(items){options.replaceChildren();items.forEach(({text,action})=>{
+      const b=V({tag:'button',className:'tyc-chip',text,attrs:{type:'button'}});
+      b.addEventListener('click',()=>{if(action==='enquire'){beginEnquiry();return}if(action==='whatsapp'){prepareWhatsApp();return}if(action==='start'){reset();return}respond(text)});options.append(b);
+    });
+  }
+  const topics=()=>quick([
+    {text:'📚 Courses'}, {text:'📝 How to enrol'}, {text:'🌾 Agricultural marketplace'},
+    {text:'📊 Market prices'},{text:'💼 Franchise opportunities'},{text:'💬 Contact the team',action:'enquire'}
+  ]);
+  function clearWelcome(){welcome.hidden=true;try{sessionStorage.setItem('tyc-greeting-dismissed','1')}catch(e){}}
+  function openChat(){if(open)return;open=true;lastFocus=document.activeElement;panel.setAttribute('aria-hidden','false');launcher.setAttribute('aria-expanded','true');root.classList.add('tyc-open');clearWelcome();input.focus({preventScroll:true});if(history.length===0)reset(true)}
+  function closeChat(){open=false;root.classList.remove('tyc-open');panel.setAttribute('aria-hidden','true');launcher.setAttribute('aria-expanded','false');(lastFocus instanceof HTMLElement?lastFocus:launcher).focus({preventScroll:true})}
+  function reset(noOpen=false){history.length=0;stage='browse';topicsLast='';lead.name='';lead.phone='';lead.service='';lead.message='';messages.replaceChildren();input.value='';input.placeholder='Ask anything about our services…';message('bot','Hello! 👋 Welcome to Tsela Yagwe Network. I can help with courses, enrolment, franchising, agricultural products and account questions. What would you like to know?');topics();if(!noOpen&&!open)openChat()}
+  function norm(t){return String(t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim()}
+  const has=(s,terms)=>terms.some(w=>s.includes(w));
+  const isGreeting=s=>/^(hi|hello|hey|morning|afternoon|good day|good evening|howzit|sawubona|dumelang|hello there)$/.test(s);
+  function answer(raw){
+    const s=norm(raw), short=s.length<3;
+    if(short)return {answer:'Could you share a little more detail? You can ask about our courses, the marketplace, financing or enrolment.',topic:'general'};
+    if(has(s,['human','someone','speak to','talk to','agent','representative','contact','whatsapp','call back','phone number','telephone','email address','support']))return {answer:'Our team can help directly on WhatsApp at +27 65 150 3974. Tap “Send an enquiry” below to share your question and contact details; WhatsApp will open with your message ready to send.',topic:'contact'};
+    if(has(s,['guaranteed','return on investment','how much profit','make money','roi','interest rate','investment return','deposit','withdraw','my money','wallet','referral','profit percentage']))return {answer:'Investment programmes and wallet screens are currently informational only. We cannot promise returns or process investments, deposits, transfers or withdrawals on this website until the required regulated arrangements are approved. For programme details, the team can review your enquiry.',topic:'investment'};
+    if(has(s,['login','log in','sign in','register account','account','password','admin','dashboard','verification','verify email','forgot password','confirmation email']))return {answer:'To create an account, tap Register, enter your name and an email address you can access, choose a password, then check your inbox (and Spam/Junk) for an email confirmation. After verifying, sign in at /login. Admin access requires separate authorisation and is not given to ordinary registrations. If a confirmation link is missing, please contact support.',topic:'account'};
+    if(has(s,['payfast','paypal','payment gateway','pay online','transaction','pay for']))return {answer:'Online payment processing has not been activated yet. Merchant setup and compliance approval are required before PayFast, PayPal or other providers can accept payments here. We can forward questions about fees or payment methods to the team.',topic:'payment'};
+    if(has(s,['fee','fees','price of course','cost of course','how much is the course','tuition','registration cost','course price','cost to enroll','cost to enrol'])||(topicsLast==='courses'&&has(s,['how much','cost','price','duration','when','dates'])))return {answer:'Course registration fees, tuition and schedules have not been published as confirmed amounts yet. See our Course Fees page for the programme structure, or send an enquiry and the team will confirm current fees, dates and requirements.',topic:'fees'};
+    if(has(s,['course','study','training','learning','investor development','tech development','crop production','classes','certificate']))return {answer:'We currently present three main training options: (1) Investor Development, (2) Advanced Tech Development and (3) Franchise Crop Production. You can explore them on the Courses page. Dates, fees and admission requirements are confirmed directly by the team.',topic:'courses'};
+    if(has(s,['enrol','enroll','apply','application','admission','join','sign up for','how to start','register for']))return {answer:'To enrol, open the Enrollment page, choose your course and preferred track (Franchise Trainer, Commodity Manager, Sales Broker or Franchise Applicant), enter your contact information, and submit the application. The team reviews applications and follows up with next steps.',topic:'enrollment'};
+    if(has(s,['fund','finance','scholarship','bursary','sponsor','financing','grant','investor programme','impact investor']))return {answer:'Course financing pathways include Individual Impact Investors, Institutional Impact Investors and National Empowerment & Development Funds. Funding is not guaranteed; availability and eligibility must be confirmed with the team. You can read about the options on the Course Financing page.',topic:'financing'};
+    if(has(s,['market price','live price','commodity price','maize price','sorghum price','cattle price','livestock price','market rates','price indicator','per kg']))return {answer:'The Market Price Indicators section covers maize, sorghum, cattle, goats, poultry, sheep and other commodities. A price should only be treated as verified if it has a current source and date. A live market data feed has not yet been activated.',topic:'prices'};
+    if(has(s,['farm','agri','produce','marketplace','commodity','livestock','cattle','goat','sheep','poultry','maize','sorghum','buy','sell','listing','vegetable']))return {answer:'Markets Online connects agricultural buyers, sellers and producers. Members can explore commodity categories and submit listings for administrator review. Visit the Markets page to browse opportunities; listing and commercial details should be confirmed with the relevant party.',topic:'marketplace'};
+    if(has(s,['franchise','broker','commodity manager','trainer','business opportunity','work opportunity','career','job']))return {answer:'Our franchise and development pathways include Franchise Trainer, Commodity Manager, Sales Broker and Franchise Applicant. Visit the Enrollment page and choose the relevant pathway, or contact the team for current entry requirements and opportunities.',topic:'franchise'};
+    if(has(s,['location','office','address','where are you','based','south africa','botswana']))return {answer:'Tsela Yagwe Network supports training and agricultural enterprise connections. Please contact the team to confirm the appropriate office, training location or availability for your area.',topic:'contact'};
+    if(isGreeting(s))return {answer:'Hello! 😊 How can I assist? You can ask about courses, how to enrol, agricultural marketplace listings, financing, or you can send a WhatsApp enquiry.',topic:'greeting'};
+    if(has(s,['thank','thanks']))return {answer:'You’re welcome! Is there anything else I can help with? You can also send your question directly to the team on WhatsApp.',topic:'general'};
+    return {answer:'Thanks for your question. I don’t have a verified answer to that specific topic yet, but the Tsela Yagwe team can assist personally. Select “Send an enquiry” to include your question in a WhatsApp message, or try asking about courses, enrolment or the marketplace.',topic:'unknown'};
+  }
+  function respond(text){if(!open)openChat();const q=String(text||'').trim().slice(0,600);if(!q)return;
+    message('user',q);
+    if(stage!=='browse'){capture(q);return}
+    const {answer:reply,topic}=answer(q);if(topic!=='unknown'&&topic!=='general')topicsLast=topic;
+    if(!lead.message&& !/^(courses?|enrol(l)?ment|market prices|franchise opportunities|agricultural marketplace)$/i.test(q))lead.message=q;
+    message('bot',reply);
+    if(topic==='unknown'||topic==='contact')quick([{text:'📝 Send my question to WhatsApp',action:'enquire'},{text:'📚 Explore courses'},{text:'🌾 Explore marketplace'}]);
+    else if(topic==='courses'||topic==='fees')quick([{text:'📝 How to enrol'},{text:'💰 Course fees'},{text:'💬 Contact the team',action:'enquire'}]);
+    else if(topic==='prices'||topic==='marketplace')quick([{text:'📊 Market prices'},{text:'🌾 How to sell products'},{text:'💬 Contact the team',action:'enquire'}]);
+    else topics();
+  }
+  function beginEnquiry(){if(!open)openChat();stage='name';options.replaceChildren();input.placeholder='Enter your full name…';message('bot','I’ll help you prepare a message to the Tsela Yagwe team. First, what is your full name?');input.focus()}
+  function capture(value){if(stage==='name'){
+      const n=value.trim();if(n.length<2){message('bot','Please enter your name (at least 2 characters).');return}
+      lead.name=n;stage='phone';input.placeholder='Your phone number, e.g. +27…';message('bot',`Thanks, ${n.split(' ')[0]}! What phone or WhatsApp number should our team use to contact you?`);return;
+    }
+    if(stage==='phone'){
+      const digits=value.replace(/[^\d]/g,'');if(digits.length<8||digits.length>15){message('bot','Please enter a valid telephone number, including your country code if possible.');return}
+      lead.phone=value.trim();stage='service';input.placeholder='What service are you interested in?';message('bot','Which area are you enquiring about?');quick(categories.map(c=>({text:c})));return;
+    }
+    if(stage==='service'){
+      lead.service=value.trim().slice(0,100);stage='detail';input.placeholder='Explain your enquiry…';message('bot','Lastly, please tell us what help you need or what question you would like the team to answer.');options.replaceChildren();return;
+    }
+    if(stage==='detail'){
+      lead.message=value.trim().slice(0,600);stage='review';message('bot',`Thank you, ${lead.name}! Your WhatsApp enquiry is ready:\n\nName: ${lead.name}\nPhone: ${lead.phone}\nInterest: ${lead.service}\nQuestion: ${lead.message}\n\nTap “Open WhatsApp” to review and send your message. Opening WhatsApp does not automatically send it.`);options.replaceChildren();quick([{text:'✅ Open WhatsApp',action:'whatsapp'},{text:'↻ Start over',action:'start'}]);input.placeholder='Your enquiry is ready — open WhatsApp';return;
+    }
+    if(stage==='review'){message('bot','Your enquiry is ready. Please choose “Open WhatsApp” to continue, or start a new conversation.');quick([{text:'✅ Open WhatsApp',action:'whatsapp'},{text:'↻ Start over',action:'start'}])}
+  }
+  function prepareWhatsApp(){if(!lead.name||!lead.phone||!lead.service||!lead.message){beginEnquiry();return}
+    const summary=history.filter(h=>h.role==='user').slice(0,5).map(x=>'• '+x.text.replace(/\s+/g,' ').slice(0,100)).join('\n');
+    const msg=`Hello Tsela Yagwe Network Team 👋\n\nI contacted you through the website chat assistant.\n\n*Name:* ${lead.name}\n*Phone:* ${lead.phone}\n*Service / Interest:* ${lead.service}\n*Enquiry:* ${lead.message}\n\n*Topics discussed:*\n${summary}\n\nWebsite: ${ROOT}\n\nPlease assist me. Thank you.`;
+    const url='https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(msg);
+    const destination=V({tag:'a',text:'Open WhatsApp again →',attrs:{href:url,target:'_blank',rel:'noopener noreferrer'}});
+    const fallback=V({className:'tyc-message tyc-bot'});const bubble=V({className:'tyc-bubble',text:'Your message is ready. WhatsApp should open in a new tab. If it does not, select: '});bubble.append(destination);fallback.append(bubble);
+    const jump=V({tag:'a',attrs:{href:url,target:'_blank',rel:'noopener noreferrer'}});jump.click();
+    message('bot','Please review the prepared message in WhatsApp and press Send to submit it. Nothing has been sent automatically.');messages.append(fallback);messages.scrollTop=messages.scrollHeight;quick([{text:'↻ Start new chat',action:'start'}]);
+  }
+  launcher.addEventListener('click',()=>open?closeChat():openChat());$('tyc-close').addEventListener('click',closeChat);
+  $('tyc-welcome-dismiss').addEventListener('click',clearWelcome);
+  $('tyc-enquiry').addEventListener('click',beginEnquiry);
+  $('tyc-reset').addEventListener('click',()=>reset());
+  $('tyc-compose').addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim();if(!q)return;input.value='';respond(q);input.focus()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)closeChat()});
+  window.TselaChatbot={open:openChat,reset,ask:respond};
+})();
+
+</script>
+<style id="ty-restructure-style">
+.tynew{--g:#0b472f;--gold:#e4ba6f;background:#f6f7f2;color:#16291f;min-height:70vh;font-family:Manrope,Arial,sans-serif}
+.tynew .tywrap{max-width:1160px;margin:auto;padding:0 23px}
+.tynew .tyhero{background:linear-gradient(115deg,rgba(6,47,31,.96),rgba(11,76,49,.93)),url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1400&q=80') center/cover;color:white;padding:86px 0}
+.tynew .tyhero h1{font-family:'Playfair Display',Georgia,serif;color:white;font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.1;margin:15px 0 25px}
+.tynew .tyhero p{max-width:780px;color:#e6f0e8;line-height:1.8;font-size:1.09rem}
+.tynew .tylabel{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#d9b36b}
+.tynew .tysection{padding:66px 0}.tynew h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,3.6vw,3rem);color:#103c29;margin:0 0 13px}
+.tynew p{line-height:1.7}.tynew .tymuted{color:#637267}.tynew .tygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:21px;margin-top:28px}
+.tynew .tycard{display:flex;flex-direction:column;text-align:left;background:white;border:1px solid #e3e8e1;border-radius:20px;padding:30px;box-shadow:0 8px 30px rgba(10,45,30,.06);text-decoration:none;color:#1e3528;min-height:210px;transition:transform .2s,box-shadow .2s}
+.tynew .tycard:hover,.tynew .tycard:focus-visible{transform:translateY(-4px);box-shadow:0 13px 35px rgba(10,45,30,.12);outline-color:#b98c3e}
+.tynew .tycard .tyemoji{font-size:2.3rem;margin-bottom:16px}
+.tynew .tycard h3{font-size:1.28rem;color:#103e2b;margin:0 0 8px}.tynew .tycard p{font-size:.94rem;color:#617267;margin:0 0 23px}
+.tynew .tygo{font-weight:800;color:#0e6844;margin-top:auto}.tynew .tyback{display:inline-flex;gap:9px;align-items:center;text-decoration:none;color:#0a6542;font-weight:800;margin-bottom:24px}
+.tynew .typill{display:inline-block;background:#f1e0bc;color:#6e4915;padding:7px 13px;border-radius:18px;font-size:.79rem;font-weight:800}
+.tynew .tybtn{background:#0c6e47;color:#fff!important;padding:14px 24px;border-radius:9px;text-decoration:none;font-weight:800;display:inline-block;margin-top:19px}
+.tynew .tydetail{background:white;border-radius:20px;border:1px solid #e1e8e0;padding:32px;max-width:840px}
+.tynew .tynotice{margin-top:24px;padding:15px 19px;background:#fff8e8;border-left:4px solid #dcb15d;border-radius:8px;color:#544c3e}
+.tynew .tycrumb{font-size:.85rem;color:#737e75;margin-bottom:14px}
+@media(max-width:650px){.tynew .tyhero{padding:55px 0}.tynew .tysection{padding:42px 0}.tynew .tydetail{padding:23px}.tynew .tycard{min-height:170px;padding:23px}}
+</style>
+<script id="ty-restructure-script">
+(()=>{
+'use strict';
+const root='/';
+const P={home:'/',courses:'/marketplace/investment-franchise-courses',markets:'/marketplace/market-categories',farm:'/marketplace/farm-produce',food:'/marketplace/food-market',livestock:'/marketplace/farm-produce/livestock',crops:'/marketplace/farm-produce/crops'};
+const COURSE=[
+{slug:'investor-development',title:'Investor Development Course',icon:'📈',desc:'Investor readiness, impact investment fundamentals and turning challenged cases into investable opportunities.'},
+{slug:'franchise-crop-production',title:'Franchise Crop Production Course',icon:'🌱',desc:'Explore the planning, development and operation of crop production franchise opportunities.'},
+{slug:'advanced-tech-development',title:'Advanced Tech Development Course',icon:'💻',desc:'Explore advanced technology and practical digital tools that support enterprise development.'}
+];
+const FOOD=[
+['traditional-foods','Traditional Foods','🍲'],
+['fast-foods','Fast Foods','🍟'],
+['liquor-restaurants','Liquor Restaurants','🍷'],
+['cakes-bakes-treats','Cakes, Bakes & Treats (Confectionery)','🎂'],
+['commercial-restaurants','Commercial Restaurants','🍽️'],
+['fast-food-franchises','Fast Food Franchises','🏪']
+];
+const paths=new Set(Object.values(P));
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const card=(name,url,desc,icon='🌿')=>'<a class="tycard" href="'+url+'" data-tynav><span class="tyemoji">'+icon+'</span><h3>'+esc(name)+'</h3><p>'+esc(desc)+'</p><span class="tygo">Explore →</span></a>';
+const wrap=s=>'<div class="tynew">'+s+'</div>';
+const shell=(crumb,title,intro,body)=>wrap('<section class="tysection"><div class="tywrap"><a href="/" data-tynav class="tyback">← Back to homepage</a><div class="tycrumb">Home / Marketplace / '+esc(crumb)+'</div><h2>'+esc(title)+'</h2><p class="tymuted">'+esc(intro)+'</p>'+body+'</div></section>');
+const grid=arr=>'<div class="tygrid">'+arr.map(a=>card(...a)).join('')+'</div>';
+const coursePage=slug=>{const c=COURSE.find(c=>c.slug===slug);return c?shell('Courses',c.title,c.desc,'<article class="tydetail"><span class="typill">Course information</span><p>This course is part of the Tsela Yagwe Network investor and franchise development training programme. Course schedules, tuition fees, eligibility and curriculum details will be published as they are confirmed by the team.</p><p>To enquire about enrolment, choose the registration button below.</p><a class="tybtn" href="/enrollment?course='+encodeURIComponent(c.slug)+'" data-ty-register>Register for this course →</a></article>'):null};
+const category=(name)=>shell('Food Market',name,'This market category is ready for approved listings and additional details.','<div class="tydetail"><span class="typill">Category established</span><p>Verified products, businesses and seller information will appear here as the marketplace grows.</p><a class="tybtn" href="/contact">Enquire about this category →</a></div>');
+function page(p){
+if(p==='/')return wrap('<section class="tyhero"><div class="tywrap"><span class="tylabel">Tsela Yagwe Network · About Us</span><h1>Transforming opportunities into impact investment cases.</h1><p>Our expertise is to transform learning opportunities and challenged business cases into impact investment cases.</p><a class="tybtn" href="#ty-marketplace">Explore the marketplace ↓</a></div></section><section id="ty-marketplace" class="tysection"><div class="tywrap"><span class="tylabel" style="color:#a5762c">Discover & participate</span><h2>Marketplace</h2><p class="tymuted">Choose one of the two categories below to discover courses and market opportunities.</p>'+grid([['Invest & Franchise Development Courses',P.courses,'Explore the network’s three investor, franchise and technology development courses.','🎓'],['Market Categories',P.markets,'Explore farm produce and the food market through organised categories.','🛒']])+'</div></section>');
+if(p===P.courses)return shell('Courses','Invest & Franchise Development Courses','Select a course to view details and register.',grid(COURSE.map(c=>[c.title,'/marketplace/course/'+c.slug,c.desc,c.icon])));
+if(p===P.markets)return shell('Market Categories','Market Categories','Select one of the two market sections.',grid([['Farm Produce',P.farm,'Browse livestock and crops.','🚜'],['Food Market',P.food,'Explore six food business categories.','🍽️']]));
+if(p===P.farm)return shell('Farm Produce','Farm Produce','Choose a produce category.',grid([['Livestock',P.livestock,'Farm livestock categories and forthcoming listings.','🐄'],['Crops',P.crops,'Crop production, produce and forthcoming listings.','🌾']]));
+if(p===P.food)return shell('Food Market','Food Market','Select a food market category.',grid(FOOD.map(([slug,name,icon])=>[name,'/marketplace/food-market/'+slug,'View businesses and market information.',icon])));
+if(p===P.livestock)return category('Livestock');
+if(p===P.crops)return category('Crops');
+if(p.startsWith('/marketplace/course/'))return coursePage(p.split('/').pop());
+if(p.startsWith('/marketplace/food-market/')){const item=FOOD.find(x=>x[0]===p.split('/').pop());return item?category(item[1]):null}
+return null;
+}
+function mount(){const el=document.querySelector('#main');if(!el)return;const h=page(location.pathname);if(!h)return;el.innerHTML=h;document.title='Tsela Yagwe Network | '+(location.pathname==='/'?'About Us & Marketplace':location.pathname.split('/').filter(Boolean).pop().replace(/-/g,' '));const nav=document.querySelector('header .navlinks');if(nav){nav.innerHTML='<a href="/" data-tynav>About Us</a><a href="/#ty-marketplace" data-tynav>Marketplace</a><a href="/marketplace/investment-franchise-courses" data-tynav>Courses</a><a href="/marketplace/market-categories" data-tynav>Market Categories</a>'}}
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-tynav]');if(!a)return;e.preventDefault();e.stopImmediatePropagation();const dest=new URL(a.href,location.origin);history.pushState({},'',dest.pathname+dest.search+dest.hash);mount();if(dest.hash)setTimeout(()=>document.querySelector(dest.hash)?.scrollIntoView({behavior:'smooth'}),50);else scrollTo(0,0)},true);
+window.addEventListener('popstate',()=>setTimeout(mount,0));
+document.addEventListener('DOMContentLoaded',()=>{setTimeout(mount,50);setTimeout(mount,700)});
+window.addEventListener('load',()=>setTimeout(mount,150));
+})();
+</script></body></html>
