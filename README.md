@@ -12,8 +12,10 @@ Hosting: Vercel. Production URL: https://tsela-yagwe-network.vercel.app
 
 - `index.html`: frontend and public marketplace navigation.
 - `app.js`: existing application logic, registration, dashboards and admin panels.
-- `styles.css`: global styles.
-- `config.js`: public Supabase URL and browser publishable key with frontend integration. **Never place a Supabase service-role key here.**
+- `styles.css`: original global styles.
+- `sketch-redesign.css`: responsive client-wireframe layout.
+- `sketch-redesign.js`: public marketplace and secure member portal screens, preserving existing `app.js` authentication and administrator features.
+- `config.js`: public Supabase URL and browser publishable key only. **Never place a Supabase service-role key here.**
 - `vercel.json`: SPA routes configuration.
 - `manifest.webmanifest`, `icon.svg`, `sw.js`: PWA configuration.
 - `offline.html`: offline fallback.

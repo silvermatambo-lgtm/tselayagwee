@@ -1,1 +1,19 @@
-{"rewrites":[{"source":"/((?!app\\.js|config\\.js|styles\\.css|icon\\.svg|manifest\\.webmanifest|sw\\.js|offline\\.html|robots\\.txt).*)","destination":"/index.html"}],"headers":[{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"}]}]}
+{
+  "rewrites": [
+    {
+      "source": "/((?!app\\.js|sketch-redesign\\.js|sketch-redesign\\.css|config\\.js|styles\\.css|icon\\.svg|manifest\\.webmanifest|sw\\.js|offline\\.html|robots\\.txt).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
