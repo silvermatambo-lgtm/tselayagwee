@@ -155,3 +155,49 @@
 @media(max-width:850px){.sk-hero-layout,.sk-intro-grid,.sk-detail-grid{grid-template-columns:1fr}.sk-hero-art{height:300px;max-width:600px}.sk-course-grid,.sk-product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sk-dashboard{grid-template-columns:1fr}.sk-sidebar{position:static;display:flex;flex-wrap:wrap;gap:5px}.sk-sidebar h3{flex-basis:100%;padding:0 6px 10px}.sk-sidebar button,.sk-sidebar .sk-adminlink{width:auto;font-size:.71rem}.sk-sidebar .sk-logout{margin:0;border:0}}
 @media(max-width:600px){.sk-hero{padding:55px 0 64px}.sk-hero h1{font-size:clamp(2.55rem,11vw,3.65rem)}.sk-hero-art{height:235px;border-width:4px}.sk-intro{padding:40px 0}.sk-section{padding:48px 0}.sk-course-grid,.sk-category-grid,.sk-product-grid,.sk-two-col,.sk-food-grid,.sk-profile-facts,.sk-form-grid{grid-template-columns:1fr}.sk-category-image{height:180px}.sk-subhero{padding:40px 0}.sk-content{padding:35px 0 55px}.sk-course,.sk-panel{padding:22px}.sk-wallet-grid{grid-template-columns:1fr 1fr;gap:9px}.sk-wallet-metric{padding:12px}.sk-wallet-metric strong{font-size:1.05rem}.sk-hero .sk-button,.sk-hero .sk-outline{flex:1}.sk-form-full{grid-column:auto}.sk-strongprice{font-size:1.6rem}.sk-product-image{height:250px}.sk-profilebanner{align-items:flex-start}.sk-avatar{width:66px;height:66px;font-size:2rem}.sk-sidebar button{flex:1 1 auto;text-align:center}.sk-spec{font-size:.75rem}.sk-sectionhead p{font-size:.92rem}}
 @media(prefers-reduced-motion:reduce){.sk-app *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Client review, 5 Nov 2026: image-led market tiles and simplified About Us footer */
+.sk-category{
+  min-height:370px;position:relative;border-radius:22px;background:#0d402a;color:#fff;
+  isolation:isolate;box-shadow:0 14px 32px #0b2e2426
+}
+.sk-category-image{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.sk-category-image img{width:100%;height:100%;object-fit:cover;filter:saturate(1.08)}
+.sk-category:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#081b1009 3%,#123d2a25 28%,#16442bed 100%);z-index:-1}
+.sk-category-info{position:absolute;bottom:0;left:0;right:0;padding:34px;color:#fff}
+.sk-category-info h3{color:#fff;font-size:clamp(1.65rem,2.4vw,2.2rem)}
+.sk-category-info p{color:#f3e8cc;max-width:440px;line-height:1.6}
+.sk-category .sk-kicker{color:#f3d49a}
+.sk-category .sk-arrow{color:#f8d49a}
+.sk-category:hover img{transform:scale(1.04)}
+.sk-client-footer-content{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:44px}
+.sk-client-footer-content>div:first-child p{max-width:450px;line-height:1.75;margin-top:20px}
+.sk-client-footer-content .footer-links{gap:12px}
+.sk-deal-summary{margin-bottom:20px}
+.sk-deal-summary h3{margin-bottom:18px;color:#183e2b}
+.sk-deal-summary .sk-spec{align-items:flex-start}
+.sk-deal-summary .sk-spec strong{font-variant-numeric:tabular-nums}
+.sk-layout-preview{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:#fff;border:1px solid #e0eadf;border-radius:22px;padding:20px;margin-bottom:26px}
+.sk-layout-preview img{width:100%;height:245px;object-fit:cover;border-radius:14px}
+.sk-layout-preview h3{font-size:1.25rem;color:#174b32;margin:19px 0 9px}
+.sk-layout-preview .sk-spec strong{color:#798a80}
+.sk-preview-caption{color:#587766;background:#eaf3ea;border-radius:10px;padding:9px 13px;font-size:.79rem;font-weight:800;margin:0 0 16px}
+.sk-layout-preview .sk-panel{box-shadow:none;padding:18px}
+@media(max-width:1050px){
+  .site-header .navlinks{gap:12px}
+  .site-header .navlinks a{font-size:.69rem}
+  .site-header .brand{min-width:140px}
+}
+@media(max-width:850px){
+  .sk-client-footer-content{grid-template-columns:1fr 1fr;gap:30px}
+  .sk-client-footer-content>div:first-child{grid-column:1/-1}
+}
+@media(max-width:600px){
+  .sk-category{min-height:315px}
+  .sk-category-info{padding:25px}
+  .sk-layout-preview{grid-template-columns:1fr;padding:13px}
+  .sk-layout-preview img{height:220px}
+  .sk-client-footer-content{grid-template-columns:1fr;gap:25px}
+  .sk-client-footer-content>div:first-child{grid-column:auto}
+}
